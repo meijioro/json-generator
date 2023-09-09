@@ -1,0 +1,182 @@
+:root {
+  --blue: #1968f8;
+  --disable: #dee2e6;
+}
+
+.masthead {
+  margin-top: 3em; 
+  margin-bottom: 3.8em;
+}
+
+.steps__nav {
+  font-size: 1.2em;
+  text-align: right;
+  padding: 2em 0 6em;
+}
+
+.steps__nav a {
+  padding: .75em 30px;
+  position: relative;
+}
+
+.steps__nav a::after {
+  display: flex;
+  position: absolute;
+  content: '✓';
+  width: 30px;
+  height: 30px;
+  background-color: var(--blue);
+  right: -15px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  border-radius: 50%;
+  font-size: .8em;
+  font-weight: 900;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: all .3s;
+  
+}
+
+.steps__nav a.disabled::after {
+  content: '';
+  background-color: var(--disable);
+  color: white;
+}
+
+.steps__fields {
+  padding: 2.5em 50px 6em;
+}
+
+
+.repeat-input {
+  display: flex;
+}
+
+.repeat-input .formulate-input {
+  width: 47.5%;
+  margin-bottom: 0;
+  margin-right: 10px;
+}
+
+.formulate-input-group .card {
+  border-color: #efefef;
+}
+
+.form-group-box {
+  padding: 1.25rem;
+  border: 1px solid #edefeb;
+  border-radius: 0.25rem;
+}
+
+.form-group-box__header {
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.3rem;
+}
+
+.formulate-input .formulate-input-element {
+  max-width: 100%;
+}
+
+.color-field.formulate-input {
+  margin-bottom: 0;
+}
+
+.color-picker-container {
+  border-radius: 0.3em;
+  border: 1px solid #cecece;
+  display: inline-block;
+  padding: 10px;
+  line-height: 1em;
+}
+.current-color {
+  width: 72px;
+  height: 15.836px;
+  border-radius: 2px;
+}
+
+pre {
+  background-color: #d6dce6;
+  line-height: 1.4;
+  padding: 1.25rem 1.5rem;
+  border-radius: 6px;
+  overflow: auto;
+  min-height: 500px;
+}
+@media (min-width: 720px) {
+  .output-col {
+    max-width: 50%;
+  }
+}
+
+.cta-design-radio .formulate-input-element {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* .cta-design-radio .formulate-input-element .formulate-input,
+.cta-design-radio .formulate-input .formulate-input-label {
+  flex: 1 1 auto;
+} */
+
+.cta-design-radio .formulate-input .formulate-input-label {
+  text-align: center;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  align-items: center;
+}
+
+/* is checked */
+.cta-design-radio
+  .formulate-input-element
+  .formulate-input[data-has-value]
+  .formulate-input-label {
+  background-color: #007bff;
+  color: white;
+}
+
+.cta-design-radio
+  .formulate-input-element
+  .formulate-input
+  .formulate-input-label::before {
+  display: inline-flex;
+  content: '✓';
+  border: 1px solid white;
+  border-radius: 50%;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 10px;
+  color: #e9ecef;
+}
+
+.cta-design-radio
+  .formulate-input-element
+  .formulate-input[data-has-value]
+  .formulate-input-label::before {
+  color: white;
+}
+
+.cta-design-radio
+  .formulate-input[data-classification='box']
+  .formulate-input-element.formulate-input-element--radio {
+  display: none;
+}
+
+.cta-design-radio
+  .formulate-input[data-classification='box']
+  .formulate-input-label--after {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+.preview-module {
+  max-width: 640px; 
+  padding: 10px;
+  margin: auto;
+}
